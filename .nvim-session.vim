@@ -18,14 +18,12 @@ badd +1 src/components/TeamsGrid.jsx
 badd +9 src/components/Header.jsx
 badd +2 src/assets/logos.js
 badd +4 src/App.jsx
-badd +18 src/index.css
-badd +0 src/main.jsx
+badd +1 src/main.jsx
 argglobal
 %argdel
 $argadd ~/dev/personal/nbaShowcase
-edit src/main.jsx
+edit src/App.jsx
 argglobal
-balt src/App.jsx
 setlocal foldmethod=manual
 setlocal foldexpr=0
 setlocal foldmarker={{{,}}}
@@ -36,11 +34,11 @@ setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 22) / 44)
+let s:l = 4 - ((3 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 4
 normal! 0
 lcd ~/dev/personal/nbaShowcase
 tabnext 1
