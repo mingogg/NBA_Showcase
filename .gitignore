@@ -1,3 +1,13 @@
+# Dependencias de npm
+node_modules/
+
+# Archivos de sesión de Neovim
+*.vim
+
+# Config local o temporal
+.env
+dist/
+
 # Logs
 logs
 *.log
