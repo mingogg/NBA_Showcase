@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-gradient-var {
+    transition:
+      --c-primary 0.7s ease-in-out,
+      --c-secondary 0.7s ease-in-out;
+
+    background: linear-gradient(
+      135deg,
+      white 0%,
+      var(--c-primary) 60%,
+      var(--c-secondary) 100%
+    );
+  }
+}
