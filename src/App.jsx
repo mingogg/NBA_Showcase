@@ -1,6 +1,9 @@
-import { useState } from 'react';
-import Header from './components/Header.jsx';
-import TeamsGrid from './components/TeamsGrid.jsx';
+import { Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
+import Header from './components/Header.jsx'
+import TeamsGrid from './components/TeamsGrid.jsx'
+import TeamDetail from './components/TeamDetail.jsx'
+import About from './components/About.jsx'
 
 function App() {
   const [hoveredTeam, setHoveredTeam] = useState(null);
@@ -37,7 +40,12 @@ function App() {
 
       <div className="relative z-30">
         <Header />
-        <TeamsGrid onHoverCard={handleTeamHover} />
+        <Routes>
+          <Route path='/NBA_Showcase' element={<TeamsGrid onHoverCard={handleTeamHover} />} />
+          <Route path='/NBA_Showcase/teams/:id' element={<TeamDetail />} />
+          <Route path='/NBA_Showcase/about' element={<About />} />
+          <Route path='*' element={<h2 className='p-6 text-xl'>Page not found</h2>} />
+        </Routes>
       </div>
     </div>
   );

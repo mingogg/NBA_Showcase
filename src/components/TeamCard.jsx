@@ -1,6 +1,13 @@
-function TeamCard({ name, logo, link, onHover, onLeave }) {
+import { useNavigate } from "react-router-dom";
+
+function TeamCard({ name, logo, id, onHover, onLeave }) {
+  const navigate = useNavigate()
+
+
+
   return (
-    <a href={link} target="_blank"> <div
+    <div
+      onClick={() => navigate(`/NBA_Showcase/teams/${id}`)}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
       className="group w-64 h-80 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-transform duration-300 transform hover:scale-[1.03] flex flex-col items-center justify-center p-6 cursor-pointer"
@@ -15,7 +22,7 @@ function TeamCard({ name, logo, link, onHover, onLeave }) {
       <h2 className="mt-4 text-lg font-semibold text-gray-800 text-center">
         {name}
       </h2>
-    </div></a>
+    </div>
   );
 }
 
