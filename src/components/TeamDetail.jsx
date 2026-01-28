@@ -16,7 +16,6 @@ function TeamDetail() {
         background: `radial-gradient(circle at bottom right, ${team.secondaryColor} 0%, ${team.primaryColor} 60%)`,
       }}
     >
-      {/* ─── History (texto) ─── */}
       <div
         className={`
     absolute top-4 left-1/2 transform -translate-x-1/2
@@ -32,7 +31,6 @@ function TeamDetail() {
         <p>{team.history}</p>
       </div>
 
-      {/* ─── Player image ─── */}
       <div
         className={`
           absolute bottom-0 left-0 overflow-hidden flex items-end z-10
@@ -48,7 +46,6 @@ function TeamDetail() {
         />
       </div>
 
-      {/* ─── Logo ─── */}
       <a
         href={team.link}
         target="_blank"
@@ -62,7 +59,6 @@ function TeamDetail() {
         />
       </a>
 
-      {/* ─── Footer ─── */}
       <footer className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-white text-sm z-20">
         Made by <a href="https://github.com/mingogg" className="underline">mingogg</a>
       </footer>
