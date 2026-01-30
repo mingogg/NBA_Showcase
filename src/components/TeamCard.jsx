@@ -6,6 +6,8 @@ function TeamCard({ name, logo, id, onHover, onLeave }) {
 
 
   return (
+
+
     <div
       onClick={() => navigate(`/teams/${id}`)}
       onMouseEnter={onHover}

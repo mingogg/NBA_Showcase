@@ -6,7 +6,14 @@ function Header() {
     ${isActive? "text-yellow-400" : "text-gray-300 hover:text-white"}`;
 
   return(
-    <header className="w-full bg-gray-900">
+    <header className="
+      fixed
+      top-0
+      left-0
+      w-full
+      bg-gray-900
+      z-50
+      ">
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4">
         <NavLink
           to="/"
